@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image:url(bg.jpeg);
+    background-repeat: no-repeat;
+   width: 100%;
+   height: 100vh;
+   background-size: cover;
+   background-attachment: fixed;
+
+}
+.nav{
+    width:auto;
+    height: 50px;
+    border-radius: 5px;
+    position: relative;
+    right: 25px;
+}
+ul{
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4 ease-in-out;
+    font-family: 'Comic Sans MS';
+}
+p{
+    float: left;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-style:oblique;
+    margin: 10px;
+}
+.imsli{
+    width: 80%;
+    height: 380px;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    background-image:url(codechef1.jpeg);
+    background-size: auto;
+    transition: ease-in-out;
+    position: absolute;
+    background-size: 100% 100%;
+    box-shadow: 1px 2px 10px 5px rgba(255, 255, 255, 0.397);
+    animation: slider 10s infinite linear;
+}
+@keyframes slider {
+    20%{background-image: url(gfg.jpeg); }
+    45%{ background-image: url(acm2.jpeg);}
+    75%{ background-image: url(hackerearth2.jpeg);}
+}
+.intro{
+    position: absolute;
+    top: 70%;
+}
+h1{
+    position: relative;
+    left: 2%;
+    font-size: 90px;
+    color: rgb(19, 143, 165);
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-weight: bold;
+}
+p{
+    font-family: 'Comic Sans MS';
+}
+.main{
+    left: 120px;
+    top: 110%;
+    position: absolute;
+    padding: 30px 20px 30px 20px;
+    margin: 10px 15px;
+}
+.card{
+    width: 220px;
+    height: 250px;
+    overflow: hidden;
+    /* background-color: aqua; */
+    display:inline-block;
+    /* box-sizing: border-box; */
+    padding: 10px 25px;
+    margin: 10px 15px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 50px red;
+}
+</style>
+</head>
+<body>
+    <div class="menu">
+        <div class="nav">
+                <ul class="ul">
+                    <li><a href="https://www.youtube.com/"> About US</a></li>
+                    <li><a href="#">Contact US</a></li>
+                </ul>
+        </div>
+        <div class="imsli">
+        </div>
+        <div class="intro">
+                <h1>Club IT</h1>
+                <p>
+                    Welcome to our site.In this you can find all the clubs that are actively running in our campus.<br>
+                    As we see in our collage,all the clubs will conduct events,workshops,hackathons etc.So we introduced a digital platform
+                   for you to register for the particular events,workshops and hackathons conducted by the clubs.<br>
+
+                    All you have to do is to SELECT the club that conducts the event or workshop and FILL UP the registration Form.<br>
+                    <p style="color:red">Hurray,waiting for you to join us....</p>
+                </p>
+                <hr>
+        </div>
+        <div class="main">
+            <div class="card" id="one"><a href="codechef.html"><img src="codechef1.jpeg" style="width: 100%; height:100%;border-radius:40px;"></a></div>
+            <div class="card" id="one"><a href="acm.html"><img src="acm2.jpeg" style="width: 100%; height:100%;border-radius:40px;"></a></div>
+            <div class="card" id="one"><a href="gfg.html"><img src="gfg.jpeg" style="width: 100%; height:100%;border-radius:40px;"></a></div>
+            <div class="card" id="one"><a href="hackerearth.html"><img src="hackerearth.jpeg" style="width: 100%; height:100%;border-radius:40px;"></a></div>
+        </div>
+    </div>
+</body>
+</html>
