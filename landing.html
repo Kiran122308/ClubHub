@@ -7,8 +7,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nova+Round&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+
+<!-- <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet"> -->
 <style>
     *{
     margin: 0;
@@ -16,13 +19,116 @@
 }
 body{
     background-image:url(bg.jpeg);
+    
     background-repeat: no-repeat;
    width: 100%;
    height: 100vh;
    background-size: cover;
    background-attachment: fixed;
+   
 
 }
+.mySlides {
+        display: none
+      }
+      img {
+        vertical-align: middle;
+      }
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      /* Caption text */
+      .text {
+        color: #ffffff;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #ffffff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #999999;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+      .active,
+      .dot:hover {
+        background-color: #111111;
+      }
+      /* Fading animation */
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px
+        }
+      }
 .nav{
     width:auto;
     height: 50px;
@@ -58,25 +164,23 @@ p{
     font-style:oblique;
     margin: 10px;
 }
-.imsli{
-    width: 80%;
-    height: 380px;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%,-50%);
-    background-image:url(codechef1.jpeg);
-    background-size: auto;
-    transition: ease-in-out;
-    position: absolute;
-    background-size: 100% 100%;
-    box-shadow: 1px 2px 10px 5px rgba(255, 255, 255, 0.397);
-    animation: slider 10s infinite linear;
+.card{
+    width: 220px;
+    height: 250px;
+    overflow: hidden;
+    /* background-color: aqua; */
+    display:inline-block;
+    /* box-sizing: border-box; */
+    padding: 10px 25px;
+    margin: 10px 15px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 50px red;
 }
-@keyframes slider {
-    20%{background-image: url(gfg.jpeg); }
-    45%{ background-image: url(acm2.jpeg);}
-    75%{ background-image: url(hackerearth2.jpeg);}
-}
+
+
 .intro{
     position: absolute;
     top: 70%;
@@ -99,35 +203,76 @@ p{
     padding: 30px 20px 30px 20px;
     margin: 10px 15px;
 }
-.card{
-    width: 220px;
-    height: 250px;
-    overflow: hidden;
-    /* background-color: aqua; */
-    display:inline-block;
-    /* box-sizing: border-box; */
-    padding: 10px 25px;
-    margin: 10px 15px;
-    border-bottom-left-radius: 50px;
-    border-top-right-radius: 50px;
-    border-top-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    box-shadow: 50px red;
+.container {  position: relative; }
+
+.container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url('./bg.jpeg');
+   opacity: 0.5;
 }
+
+.content {
+    position: relative; 
+    z-index: 2;
+}
+
 </style>
 </head>
 <body>
+    
     <div class="menu">
         <div class="nav">
+            <img src="./clubhub.png" alt="ClubHub" width="256px" height="256px">
                 <ul class="ul">
-                    <li><a href="https://www.youtube.com/"> About US</a></li>
+                    <li><a href="https://www.youtube.com/" target="blank"> About US</a></li>
                     <li><a href="#">Contact US</a></li>
                 </ul>
         </div>
-        <div class="imsli">
-        </div>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <center><img src="./acm2.jpeg" width="300px"></center>
+              
+            </div>
+            <div class="mySlides fade">
+              
+              <center><img src="./hackerearth.jpeg" style="width:300px"></center>
+             
+            </div>
+            <div class="mySlides fade">
+              
+              <center><img src="./codechef1.jpeg" style="width: 300px;"></center>
+ 
+            </div>
+            
+          </div>
+          <!-- <img src="./clubhub.png" alt="" srcset=""> -->
+          <br>
+          <script>
+            var slideIndex = 0;
+            showSlides();
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              for(i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              slideIndex++;
+              if(slideIndex > slides.length) {
+                slideIndex = 1
+              }
+              slides[slideIndex - 1].style.display = "block";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+          </script>
+        
         <div class="intro">
-                <h1>Club IT</h1>
+                <h1 style="font-family: 'Roboto Slab', serif;">CLUB HUB</h1>
                 <p>
                     Welcome to our site.In this you can find all the clubs that are actively running in our campus.<br>
                     As we see in our collage,all the clubs will conduct events,workshops,hackathons etc.So we introduced a digital platform
@@ -144,6 +289,8 @@ p{
             <div class="card" id="one"><a href="gfg.html"><img src="gfg.jpeg" style="width: 100%; height:100%;border-radius:40px;"></a></div>
             <div class="card" id="one"><a href="hackerearth.html"><img src="hackerearth.jpeg" style="width: 100%; height:100%;border-radius:40px;"></a></div>
         </div>
+    
     </div>
+    
 </body>
 </html>
